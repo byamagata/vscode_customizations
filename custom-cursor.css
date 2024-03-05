@@ -1,0 +1,29 @@
+@keyframes my-slide {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.5);
+    }
+    50% {
+      transform: scale(2);
+    }
+    75% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .monaco-editor .cursors-layer.cursor-smooth-caret-animation > .cursor {
+    /* NOTE: first enable editor.cursorSmoothCaretAnimation */
+    /* NOTE: always leave the transition in the code */
+    transition: all 100ms ease-out;
+  
+    /* NOTE: uncomment this animation for skew demo */
+    animation: my-slide 2s ease-in-out infinite;
+  
+    /* NOTE: uncomment this animation for rotation demo */
+    /* animation: my-rotation 2s linear infinite; */
+  }
